@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "01ab5f8b-85a6-478a-bdb5-d16607438697",
+		"name": "Xpoesy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "WalletConnection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/wallet/connect",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"connect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_image",
+									"type": "file",
+									"src": "/C:/Users/SteerC/Pictures/Camera Roll/AlbumArt_{B5020207-474E-4720-8A7A-DC17588FA300}_Large.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/wallet/add_image/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"add_image",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62189651d3ececa85c56fbaf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/wallet",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check_Sign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/wallet/check",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_name",
+									"value": "Jack",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "darkhorese@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user_bio",
+									"value": "I am a developer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/wallet/add_profile/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"add_profile",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62189651d3ececa85c56fbaf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NFT",
+			"item": [
+				{
+					"name": "Create_NFT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "BlockImage",
+									"type": "text"
+								},
+								{
+									"key": "collection",
+									"value": "Lions",
+									"type": "text"
+								},
+								{
+									"key": "supply",
+									"value": "XRPL",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "funny",
+									"type": "text"
+								},
+								{
+									"key": "memo",
+									"value": "This lion is smiling",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "r96PMK5jh45J6f4S36KZEpzS4rwCamoD6d",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "myFile",
+									"type": "file",
+									"src": "/C:/Users/SteerC/Pictures/Camera Roll/AlbumArt_{B5020207-474E-4720-F661-6C085426A100}_Large.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/nft/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"nft",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_NFT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/nft",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"nft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy_NFT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "QmUdtwuwaaEBbwE4fHq3vTQJ7BATpqUcoNtDuq9rdh1PMa",
+									"description": "NFT Token",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "r96PMK5jh45J6f4S36KZEpzS4rwCamoD6d",
+									"description": "Token Owner Address",
+									"type": "text"
+								},
+								{
+									"key": "user_token",
+									"value": "2c1f38ce-a008-44bd-aecc-680926d8c760",
+									"description": "Current User Device Token, you can get the information when you sign in",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/nft/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"nft",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change_Price_NFT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "QmUdtwuwaaEBbwE4fHq3vTQJ7BATpqUcoNtDuq9rdh1PMa",
+									"description": "NFT Token",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "r96PMK5jh45J6f4S36KZEpzS4rwCamoD6d",
+									"description": "Token Owner Address",
+									"type": "text"
+								},
+								{
+									"key": "new_price",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/nft/change",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"nft",
+								"change"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "XPoem",
+			"item": [
+				{
+					"name": "Get_XPoem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/xpoem",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_XPoem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Rabbit and Carrots",
+									"type": "text"
+								},
+								{
+									"key": "nft_link",
+									"value": "https://xpoem/1",
+									"type": "text"
+								},
+								{
+									"key": "xpoem",
+									"value": "Once upon a time one rabbit go on",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "qew",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Anders Hermann",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Xpem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "620f8e4142059335477afb71"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Xpoem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Rabbit and Carrots",
+									"type": "text"
+								},
+								{
+									"key": "nft_link",
+									"value": "https://xpoem/5",
+									"type": "text"
+								},
+								{
+									"key": "xpoem",
+									"value": "Once upon a time one rabbit go on, she wake up, she said where ",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Anders Hermann",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "620f660b542d9a11a57bf33a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "xpoem_id",
+									"value": "620f660b542d9a11a57bf33a",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "620f66dd542d9a11a57bf333",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This poem is excited",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "This is wonderful poem",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/comment/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"comment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "621652843c519cdf042a8414"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/xpoem/comment/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"comment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62164c23861d9178fe074918"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post_Reply",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment_id",
+									"value": "621652843c519cdf042a8414",
+									"type": "text"
+								},
+								{
+									"key": "reply",
+									"value": "Thank very much",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/reply",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"reply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_Reply",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reply",
+									"value": "I will create other poems fsdfsfsdfsdfds",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/xpoem/reply/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"reply",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "621652843c519cdf042a8414"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Reply",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/xpoem/reply/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"reply",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "621652843c519cdf042a8414"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Comment and Reply",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/xpoem/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"xpoem",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
